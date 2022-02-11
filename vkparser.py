@@ -27,7 +27,7 @@ class VKParser:
         for idOfOtherGroup in self.idOfOtherGroups:
             time.sleep(2)
             resp = req.get('https://api.vk.com/method/wall.get',
-                           params={'access_token': self.token, 'v': self.v, 'owner_id': idOfOtherGroup, 'count': 3})
+                           params={'access_token': self.token, 'v': self.v, 'owner_id': idOfOtherGroup, 'count': 2})
 
             for publication in resp.json()['response']['items']:
                 post = Post()
